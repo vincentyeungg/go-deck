@@ -1,7 +1,15 @@
 package main
 
+import "fmt"
+
 func main() {
 	cards := newDeck()
 
-	cards.print()
+	hand, remainingDeck := deal(cards, 5)
+
+	fmt.Println("Printing hand:")
+	hand.print()
+
+	fmt.Println("Printing remaining deck:")
+	remainingDeck.print()
 }
